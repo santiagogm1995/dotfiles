@@ -4,7 +4,7 @@
 ## Need install:
 
 - `Install-Module PowerShell-yaml`
-- 
+- CF Cli installed https://docs.cloudfoundry.org/cf-cli/install-go-cli.html
 
 ## Usage:
 
