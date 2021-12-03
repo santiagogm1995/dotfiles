@@ -1,7 +1,6 @@
 # btpguid - return BTP subaccount/directory GUIDs
 Param
 (
-    [Parameter(Mandatory = $true)]
     [string] $name,
     [String]$target
 )
