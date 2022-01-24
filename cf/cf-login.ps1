@@ -13,6 +13,6 @@ if ($pass -eq $null -or $user -ne [String]::Empty) {
         [Runtime.InteropServices.Marshal]::SecureStringToBSTR($pass))
 }
 
-If ($user -eq [String]::Empty) { $user = "santiago.gonzalez.mota@everis.com" }
+If ($user -eq [String]::Empty) { $user = "<username>" }
 
 cf login -a $url -u $user -p $pass
