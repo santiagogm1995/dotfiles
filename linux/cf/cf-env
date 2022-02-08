@@ -1,8 +1,13 @@
 #!/bin/bash
 
-echo "Select an application:"
-cf a 
-read -p 'Name: ' app
+if [ -n "$1" ]; then
+    echo "Select an application: $1" 
+    app=$1
+else
+    echo "Select an application:"
+    cf a 
+    read -p 'Name: ' app
+fi
 
 guid=$(cf curl '/v3/apps' | jq -c ".resources[] |  select(.name==\"$app\") | .guid" | sed 's/"//g')
 
