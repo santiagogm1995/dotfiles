@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Select an application:"
+cf a 
+read -p 'Name: ' app
+
+guid=$(cf curl '/v3/apps' | jq -c ".resources[] |  select(.name==\"$app\") | .guid" | sed 's/"//g')
+
+echo "/v3/apps/$guid/env"
+
+cf curl "/v3/apps/$guid/env" | jq '.system_env_json' > default-env.json 

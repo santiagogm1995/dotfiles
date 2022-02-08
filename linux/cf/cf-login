@@ -1,0 +1,5 @@
+#!/bin/bash
+
+url="https://api.cf.eu10.hana.ondemand.com"
+
+cf login -a $url -u $USER -p $PASSWD

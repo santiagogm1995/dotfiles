@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Select an application:"
+cf a 
+read -p 'Name: ' app
+
+echo $app
+
+cf logs $app --recent
